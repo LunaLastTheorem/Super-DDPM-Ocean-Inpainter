@@ -2,6 +2,11 @@ html {
   margin: 0px;
 }
 
+body{
+  padding: 0;
+  margin: 0;
+}
+
 #Splash_box span {
   display: inline-block;
   color: green;
@@ -15,6 +20,10 @@ html {
   flex-direction: column;
   margin: 0;
   align-items: center;
+}
+
+#Chair_space{
+  margin-top: 1rem;
 }
 
 img {
