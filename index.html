@@ -12,20 +12,28 @@
 <body>
     <div id="top">
         <h1>Super DDPM Ocean Inpainter++</h1>
-        
+
         <div id="Splash_box">
             <span id="Splash"></span>
         </div>
     </div>
 
-    <button id="Sex_button">sex</button>
-    <button id="Apply_denoise_function" onclick="Noise_function()">denoise</button>
-    <button id="Do_inpaint">inpaint</button>
-    <button id="Call_seth">call seth</button>
-    <button id="add_chair" onclick="Add_chair()">add chair</button>
+    <div id="game-container">
 
-    <div id="Chair_space">
+        <div id="boss-fight-box">
+            <progress id="file" value="32" max="100"> 32% </progress>
+        </div>
+
+        <div id="actions-bar">
+            <button id="Sex_button">sex</button>
+            <button id="Apply_denoise_function" onclick="Noise_function()">denoise</button>
+            <button id="Do_inpaint">inpaint</button>
+            <button id="Call_seth">call seth</button>
+            <button id="add_chair" onclick="Add_chair()">add chair</button>
+        </div>
     </div>
+
+    <div id="Chair_space"></div>
 </body>
 
 </html>
