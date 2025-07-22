@@ -19,12 +19,48 @@ const Chair_images = [
     "./src/chair5.jpg"
 ]
 
+let Sex_audio = null
+let Is_playing = false;
+
 window.onload = function () {
     const Splash_view = document.getElementById("Splash");
     Splash_view.innerHTML = Choose_splash();
 
     const Splash_box = document.getElementById("Splash_box");
     Splash_box.classList.add("vibrate-1");
+}
+
+function disableEnable(Mybutton, Time){
+    document.getElementById(Mybutton).disabled = true
+    setTimeout(() => EnableButton(Mybutton), Time)
+}
+
+function EnableButton(Mybutton, time){
+    document.getElementById(Mybutton).disabled = false
+}
+
+function Call_seth(){
+    disableEnable("Call_seth", 14000)
+    const audio = new Audio("./sounds/talk.mp3");
+    audio.play()
+}
+
+function Sex_time(){
+    const button = document.getElementById("Sex_button");
+
+    if(!Sex_audio){
+        Sex_audio = new Audio("./sounds/theme.mp3")
+    }
+
+    if(!Is_playing){
+        Sex_audio.play()
+        Is_playing = true;
+        button.textContent = "sexn't"
+    }else{
+        Sex_audio.pause()
+        Is_playing = false;
+        button.textContent = "sex"
+    }
 }
 
 function Get_chair() {
