@@ -21,6 +21,7 @@ const Chair_images = [
 
 let Sex_audio = null
 let Is_playing = false;
+let chair_count = 0;
 
 window.onload = function () {
     const Splash_view = document.getElementById("Splash");
@@ -68,8 +69,10 @@ function Get_chair() {
 }
 
 function Add_chair() {
-    console.log("Appending chair");
-
+    chair_count++;
+    if(chair_count == 100){
+        window.alert("The amount of chairs in the room fills you with relaxation");
+    }
     const Chair_space = document.getElementById("Chair_space");
     const Chair_image_element = document.createElement("img")
 
@@ -87,8 +90,8 @@ function Noise_function() {
 }
 
 // main game loop
-setInterval(function () {
-    if (Math.random() < 0.05) {
-        window.alert("DrCaley: Zoom?")
-    }
-}, 1000);
+// setInterval(function () {
+//     if (Math.random() < 0.02) {
+//         window.alert("DrMrCaley: Zoom?")
+//     }
+// }, 1000);

@@ -26,13 +26,14 @@ body{
   margin-top: 1rem;
 }
 
-img {
+#Chair_space img {
   height: 100px;
   width: 100px;
 }
 
 #game-container {
   margin: 2rem 0;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,12 +41,35 @@ img {
 }
 
 #boss-fight-box {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
   width: 100%;
 }
 
-progress {
-  width: 100%;
+#boss-fight-box img{
+  height: 50%;
+  align-self: center;
+}
+
+#boss_bar {
+  width: 75%;
+  margin: 0 auto;
   background-color: red;
+}
+
+progress{
+  appearance: auto;
+}
+
+#researchers{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.portrait{
+  text-align: center;
 }
 
 .vibrate-1 {
